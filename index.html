@@ -594,6 +594,7 @@ footer {
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Work</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#opensource">Open Source</a></li>
     <li><a href="#contact" class="nav-hire">Hire Me</a></li>
   </ul>
 </nav>
@@ -940,9 +941,121 @@ footer {
 
 <div class="divider"></div>
 
+<!-- ═══ OPEN SOURCE ═══ -->
+<section id="opensource">
+  <div class="sec-eyebrow">06 &mdash; Open Source</div>
+  <h2 class="sec-headline sr">GitHub<br><em>Projects &amp; Tools.</em></h2>
+  <p class="sec-sub sr sr-d1">26 public repositories — SDKs, developer tools, and AI-native apps built in the open. <a href="https://github.com/amitgaikwad2837" target="_blank" style="color:var(--gold);text-decoration:none;">View all on GitHub &rarr;</a></p>
+
+  <!-- Featured App -->
+  <div style="margin-bottom:20px;">
+    <div class="proj-card featured sr" style="background:var(--bg3);">
+      <div class="proj-accent gold"></div>
+      <div>
+        <span class="proj-tag gold">Mobile App &middot; React Native &middot; AI</span>
+        <div class="proj-name">InnerSpace &mdash; AI Personal Growth Companion</div>
+        <p class="proj-desc">A privacy-first iOS &amp; Android app with 35+ AI specialist helpers across 9 life categories. Supports habit tracking, guided journaling, structured decision analysis, and multi-turn AI conversations. Multi-provider AI (Gemini, OpenAI, Claude, Groq) with a local on-device AI option. All data encrypted with AES-256-GCM — no backend, no account required.</p>
+      </div>
+      <div>
+        <div class="proj-impact"><strong>10 languages &middot; AES-256-GCM encryption &middot; local AI mode</strong> — privacy-first design with zero data transmitted off-device. Full CI/CD pipeline with TypeScript strict mode and security scanning.</div>
+        <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://github.com/amitgaikwad2837/InnerSpace" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--gold);text-decoration:none;padding:8px 16px;border:1px solid rgba(200,169,110,0.3);border-radius:8px;transition:background 0.2s;" onmouseover="this.style.background='var(--gold-dim)'" onmouseout="this.style.background='transparent'">&#128279; View on GitHub</a>
+          <a href="https://amitgaikwad2837.github.io/InnerSpace/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;padding:8px 16px;border:1px solid var(--border);border-radius:8px;transition:background 0.2s;" onmouseover="this.style.background='var(--surface)'" onmouseout="this.style.background='transparent'">&#127758; Live Site</a>
+        </div>
+        <div class="proj-stack" style="margin-top:16px;">
+          <span class="stack-tag">TypeScript</span><span class="stack-tag">React Native</span><span class="stack-tag">Expo SDK 56</span>
+          <span class="stack-tag">Zustand</span><span class="stack-tag">AES-256-GCM</span><span class="stack-tag">i18next</span>
+          <span class="stack-tag">Claude API</span><span class="stack-tag">OpenAI</span><span class="stack-tag">Gemini</span>
+          <span class="stack-tag">Local AI (Executorch)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Developer Tools Grid -->
+  <div class="projects-layout">
+
+    <div class="proj-card sr sr-d1" style="background:var(--bg3);">
+      <div class="proj-accent blue"></div>
+      <span class="proj-tag blue">DevOps Tool &middot; TypeScript</span>
+      <div class="proj-name">API Contract Drift Detector</div>
+      <p class="proj-desc">Detects drift between OpenAPI specs and backend implementations before it reaches production. Catches breaking changes, missing endpoints, and type mismatches in CI/CD pipelines — keeping contracts and code always in sync.</p>
+      <div style="display:flex;gap:10px;margin-top:auto;padding-top:20px;">
+        <a href="https://github.com/amitgaikwad2837/api-contract-drift-detector" target="_blank" style="font-size:12px;color:var(--gold);text-decoration:none;padding:6px 12px;border:1px solid rgba(200,169,110,0.3);border-radius:6px;">View on GitHub &rarr;</a>
+      </div>
+      <div class="proj-stack" style="margin-top:14px;">
+        <span class="stack-tag">TypeScript</span><span class="stack-tag">OpenAPI</span><span class="stack-tag">CI/CD</span><span class="stack-tag">Contract Testing</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d2" style="background:var(--bg3);">
+      <div class="proj-accent green"></div>
+      <span class="proj-tag green">AI Tool &middot; TypeScript</span>
+      <div class="proj-name">AI-Powered Migration Generator</div>
+      <p class="proj-desc">Generates database migrations automatically from schema diffs using AI. Eliminates manual migration writing — point it at two schema versions and get production-ready migration scripts with rollback support.</p>
+      <div style="display:flex;gap:10px;margin-top:auto;padding-top:20px;">
+        <a href="https://github.com/amitgaikwad2837/ai-powered-migration-generator" target="_blank" style="font-size:12px;color:var(--gold);text-decoration:none;padding:6px 12px;border:1px solid rgba(200,169,110,0.3);border-radius:6px;">View on GitHub &rarr;</a>
+      </div>
+      <div class="proj-stack" style="margin-top:14px;">
+        <span class="stack-tag">TypeScript</span><span class="stack-tag">AI</span><span class="stack-tag">Database</span><span class="stack-tag">Schema Diff</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d3" style="background:var(--bg3);">
+      <div class="proj-accent gold"></div>
+      <span class="proj-tag gold">AI Tool &middot; TypeScript</span>
+      <div class="proj-name">API Mock Data Intelligence</div>
+      <p class="proj-desc">Generates intelligent, context-aware mock data from API schemas. Goes beyond random data — understands field semantics to produce realistic test data that mirrors production patterns for APIs.</p>
+      <div style="display:flex;gap:10px;margin-top:auto;padding-top:20px;">
+        <a href="https://github.com/amitgaikwad2837/api-mock-data-intelligence" target="_blank" style="font-size:12px;color:var(--gold);text-decoration:none;padding:6px 12px;border:1px solid rgba(200,169,110,0.3);border-radius:6px;">View on GitHub &rarr;</a>
+      </div>
+      <div class="proj-stack" style="margin-top:14px;">
+        <span class="stack-tag">TypeScript</span><span class="stack-tag">OpenAPI</span><span class="stack-tag">AI</span><span class="stack-tag">Test Automation</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d4" style="background:var(--bg3);">
+      <div class="proj-accent blue"></div>
+      <span class="proj-tag blue">Engineering Tool &middot; TypeScript</span>
+      <div class="proj-name">Architecture Decision Record Generator</div>
+      <p class="proj-desc">Automatically generates Architecture Decision Records (ADRs) from pull request metadata. Captures context, decisions, and consequences from PRs — keeping your architecture documentation always current with zero manual effort.</p>
+      <div style="display:flex;gap:10px;margin-top:auto;padding-top:20px;">
+        <a href="https://github.com/amitgaikwad2837/architecture-decision-record-generator" target="_blank" style="font-size:12px;color:var(--gold);text-decoration:none;padding:6px 12px;border:1px solid rgba(200,169,110,0.3);border-radius:6px;">View on GitHub &rarr;</a>
+      </div>
+      <div class="proj-stack" style="margin-top:14px;">
+        <span class="stack-tag">TypeScript</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">ADR</span><span class="stack-tag">AI Docs</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GitHub CTA Banner -->
+  <div style="margin-top:24px;padding:32px 36px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;" class="sr">
+    <div>
+      <div style="font-family:var(--ff-mono);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Total Public Repos</div>
+      <div style="font-family:var(--ff-serif);font-size:32px;font-weight:700;color:var(--gold);line-height:1;">26</div>
+      <div style="font-size:13px;color:var(--text3);margin-top:4px;">apps, SDKs, and developer tools</div>
+    </div>
+    <div>
+      <div style="font-family:var(--ff-mono);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Primary Language</div>
+      <div style="font-family:var(--ff-serif);font-size:32px;font-weight:700;color:var(--gold);line-height:1;">TypeScript</div>
+      <div style="font-size:13px;color:var(--text3);margin-top:4px;">across all major repos</div>
+    </div>
+    <div>
+      <div style="font-family:var(--ff-mono);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Focus Areas</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
+        <span class="stack-tag">AI Tools</span><span class="stack-tag">DevOps SDKs</span><span class="stack-tag">Mobile Apps</span><span class="stack-tag">API Tooling</span>
+      </div>
+    </div>
+    <a href="https://github.com/amitgaikwad2837" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg);padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">View All 26 Repos &rarr;</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ═══ CONTACT ═══ -->
 <section id="contact">
-  <div class="sec-eyebrow">06 &mdash; Contact</div>
+  <div class="sec-eyebrow">07 &mdash; Contact</div>
   <h2 class="sec-headline sr">Let's Build<br><em>Something Great.</em></h2>
   <div class="contact-layout">
     <div class="sr sr-d1">
@@ -983,13 +1096,7 @@ footer {
         <div class="open-to-item">CTO / Head of Engineering (Scale-ups)</div>
         <div class="open-to-item">Remote &middot; Hybrid &middot; Relocation</div>
       </div>
-      <div class="market-badges">
-        <span class="market-badge">US</span>
-        <span class="market-badge">UK</span>
-        <span class="market-badge">Canada</span>
-        <span class="market-badge">India</span>
-        <span class="market-badge">Remote Global</span>
-      </div>
+
     </div>
   </div>
 </section>
@@ -999,6 +1106,7 @@ footer {
   <div class="footer-copy">&copy; 2026 <span>Amit Gaikwad</span> &mdash; Pune, India</div>
   <div class="footer-links">
     <a href="#hero">Top</a>
+    <a href="https://github.com/amitgaikwad2837" target="_blank">GitHub</a>
     <a href="mailto:amit.gaikwad37@gmail.com">Email</a>
     <a href="https://linkedin.com/in/amit-gaikwad-6385415b" target="_blank">LinkedIn</a>
   </div>
