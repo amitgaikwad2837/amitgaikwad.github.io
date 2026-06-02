@@ -17,6 +17,7 @@
    DESIGN TOKENS
 ══════════════════════════════════════════ */
 :root {
+  /* ── Dark theme (default) ── */
   --bg:        #080810;
   --bg2:       #0e0e1a;
   --bg3:       #13131f;
@@ -38,6 +39,29 @@
   --ff-sans:   'Inter', system-ui, sans-serif;
   --ff-mono:   'JetBrains Mono', monospace;
   --ease:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Light theme — auto-applied when user OS is light mode ── */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:        #f8f7f4;
+    --bg2:       #ffffff;
+    --bg3:       #f0eff9;
+    --surface:   #e8e7f0;
+    --surface2:  #dddce8;
+    --border:    rgba(10,10,30,0.09);
+    --border2:   rgba(10,10,30,0.18);
+    --gold:      #8b6914;
+    --gold2:     #a07c1a;
+    --gold-dim:  rgba(139,105,20,0.1);
+    --text:      #0f0f1a;
+    --text2:     #3a3a50;
+    --text3:     #7a7a95;
+    --green:     #0f8c64;
+    --green-dim: rgba(15,140,100,0.08);
+    --blue:      #1a4fff;
+    --blue-dim:  rgba(26,79,255,0.08);
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -63,6 +87,10 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   background-size: 200px 200px;
   opacity: 0.4;
+}
+@media (prefers-color-scheme: light) {
+  body::before { opacity: 0.12; }
+  #nav { background: rgba(248,247,244,0.88) !important; }
 }
 
 /* ══════════════════════════════════════════
@@ -586,7 +614,7 @@ footer {
     <div class="nav-monogram">AG</div>
     <div>
       <div class="nav-name">Amit Gaikwad</div>
-      <div class="nav-title-small">Director of Engineering</div>
+      <div class="nav-title-small">Sr. Engineering Manager</div>
     </div>
   </a>
   <ul class="nav-links">
@@ -594,6 +622,7 @@ footer {
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Work</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#domains">Domains</a></li>
     <li><a href="#opensource">Open Source</a></li>
     <li><a href="#contact" class="nav-hire">Hire Me</a></li>
   </ul>
@@ -652,6 +681,10 @@ footer {
       <div class="info-row">
         <span class="info-row-label">LinkedIn</span>
         <span class="info-row-val"><a href="https://linkedin.com/in/amit-gaikwad-6385415b" target="_blank">linkedin.com/in/amit-gaikwad</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-row-label">Portfolio</span>
+        <span class="info-row-val"><a href="https://amitgaikwad2837.github.io/amitgaikwad.github.io/" target="_blank">amitgaikwad2837.github.io</a></span>
       </div>
       <div class="avail-badge">Available for new roles</div>
     </div>
@@ -749,7 +782,7 @@ footer {
 <section id="projects">
   <div class="sec-eyebrow">03 &mdash; Selected Work</div>
   <h2 class="sec-headline sr">Flagship<br><em>Projects.</em></h2>
-  <p class="sec-sub sr sr-d1">18+ programs delivered across ML, IoT, Healthcare, HRMS, SaaS, and FinTech spanning US, UK, Canada, and India.</p>
+  <p class="sec-sub sr sr-d1">18+ programs delivered across ML, IoT, Healthcare, HRMS, SaaS, and FinTech spanning US, UK, Canada, and India. A selection of flagship and notable projects is shown below.</p>
   <div class="projects-layout">
 
     <!-- Featured -->
@@ -826,6 +859,108 @@ footer {
       </div>
     </div>
 
+
+    <!-- ─── Additional Projects Row ─── -->
+    <div class="proj-card sr sr-d2" style="background:var(--bg3);">
+      <div class="proj-accent gold"></div>
+      <span class="proj-tag gold">HR Tech &middot; SaaS &middot; UK</span>
+      <div class="proj-name">CaseFlowHR &mdash; HR Case Management</div>
+      <p class="proj-desc">Cloud-based HR case management platform for Pragmatik (UK). Full AWS infrastructure (EC2, S3, RDS), automated CI/CD pipelines via Git, and a microservices backend — enabling HR teams to manage employee cases end-to-end.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">ASP.NET Core</span><span class="stack-tag">SQL Server</span>
+        <span class="stack-tag">AWS</span><span class="stack-tag">CI/CD</span><span class="stack-tag">HR Domain</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d3" style="background:var(--bg3);">
+      <div class="proj-accent blue"></div>
+      <span class="proj-tag blue">Employee Experience &middot; UK</span>
+      <div class="proj-name">TalkOut &mdash; Employee Experience Platform</div>
+      <p class="proj-desc">Cloud-native EX platform for Martin James Group (UK) solving communication, culture, belonging, and wellbeing. Broke up a monolithic app into microservices using Docker, deployed on Azure with full Kubernetes orchestration.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">React</span><span class="stack-tag">.NET Core</span><span class="stack-tag">MongoDB</span>
+        <span class="stack-tag">Kubernetes</span><span class="stack-tag">Docker</span><span class="stack-tag">Terraform</span><span class="stack-tag">Azure</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d4" style="background:var(--bg3);">
+      <div class="proj-accent green"></div>
+      <span class="proj-tag green">Healthcare &middot; India</span>
+      <div class="proj-name">eHealthSystem &mdash; Patient Health Records</div>
+      <p class="proj-desc">Integrated cloud-based platform for NCORD (India) enabling patients to access all health reports and demographics on mobile. Deep HL7 integration across multiple HIS systems for seamless clinical data exchange on iOS and Android.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">C# .NET</span><span class="stack-tag">MySQL</span>
+        <span class="stack-tag">Android</span><span class="stack-tag">iOS</span><span class="stack-tag">HL7</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d1" style="background:var(--bg3);">
+      <div class="proj-accent gold"></div>
+      <span class="proj-tag gold">Healthcare &middot; India</span>
+      <div class="proj-name">Pro-Business Intelligence &mdash; Healthcare BI</div>
+      <p class="proj-desc">Integrated cloud-based reporting platform for Clinivantage (India) spanning HIS, PMS, and EMR systems. Unified analytics across multiple healthcare verticals into a single BI dashboard — enabling data-driven clinical decisions at scale.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">Angular 5</span><span class="stack-tag">Java</span>
+        <span class="stack-tag">PostgreSQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">BI</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d2" style="background:var(--bg3);">
+      <div class="proj-accent blue"></div>
+      <span class="proj-tag blue">FinTech &middot; US</span>
+      <div class="proj-name">WealthBook &mdash; Investor Portfolio Platform</div>
+      <p class="proj-desc">Cloud-based portfolio management platform for Tangram Solutions (US) — managing ETFs, live financial data, and multi-asset portfolios in one place. Full-stack development across web and mobile (Xamarin).</p>
+      <div class="proj-stack">
+        <span class="stack-tag">Ruby on Rails</span><span class="stack-tag">MySQL</span>
+        <span class="stack-tag">Xamarin</span><span class="stack-tag">HTML5</span><span class="stack-tag">Portfolio Mgmt</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d3" style="background:var(--bg3);">
+      <div class="proj-accent green"></div>
+      <span class="proj-tag green">IoT &middot; Security</span>
+      <div class="proj-name">SmartCMS &mdash; ATM Security Monitoring</div>
+      <p class="proj-desc">Cloud and on-premise ATM security monitoring system for SmartI (India) — integrated with all security hardware, monitored and controlled over the cloud with a local offline fallback and full ticker management lifecycle.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">C# .NET</span><span class="stack-tag">ASP.NET</span>
+        <span class="stack-tag">Web API</span><span class="stack-tag">MySQL</span><span class="stack-tag">IoT</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d4" style="background:var(--bg3);">
+      <div class="proj-accent blue"></div>
+      <span class="proj-tag blue">AI/ML &middot; Research</span>
+      <div class="proj-name">MICA Doklam &mdash; Sentiment Analysis Platform</div>
+      <p class="proj-desc">Sentiment analysis research platform for MICA – The School of Ideas. Analysed sentiments of India, China, and the US on the Doklam Issue using NLP across diverse sources — PDFs, images, text files, Twitter, and RSS news feeds.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">Python</span><span class="stack-tag">Machine Learning</span>
+        <span class="stack-tag">Sentiment Analysis</span><span class="stack-tag">Angular 6</span><span class="stack-tag">NLP</span>
+      </div>
+    </div>
+
+    <div class="proj-card sr sr-d1" style="background:var(--bg3);">
+      <div class="proj-accent gold"></div>
+      <span class="proj-tag gold">Manufacturing &middot; RPA &middot; Canada</span>
+      <div class="proj-name">Toro RPA &mdash; Manufacturing Automation</div>
+      <p class="proj-desc">Led end-to-end RPA automation for Toro (Canada) across multiple departments — from FSD/SSD documentation through delivery. Automated complex multi-departmental business processes using Automation Anywhere, reducing manual effort significantly.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">Automation Anywhere</span><span class="stack-tag">.NET</span>
+        <span class="stack-tag">Manufacturing</span><span class="stack-tag">Process Automation</span>
+      </div>
+    </div>
+
+
+    <div class="proj-card sr sr-d2" style="background:var(--bg3);">
+      <div class="proj-accent gold"></div>
+      <span class="proj-tag gold">SaaS &middot; India</span>
+      <div class="proj-name">CADashboard &mdash; Professional Practice Management</div>
+      <p class="proj-desc">Cloud-based practice management platform for Mindchipps (India) built for CA, CS, and Lawyers to manage their day-to-day operations — client files, deadlines, compliance tasks, and team workflows — all in one place.</p>
+      <div class="proj-stack">
+        <span class="stack-tag">C# .NET</span><span class="stack-tag">ASP.NET</span>
+        <span class="stack-tag">Web API</span><span class="stack-tag">MySQL</span><span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -899,9 +1034,69 @@ footer {
 
 <div class="divider"></div>
 
+<!-- ═══ DOMAIN EXPERTISE ═══ -->
+<section id="domains" style="background:var(--bg);">
+  <div class="sec-eyebrow">05 &mdash; Domain Expertise</div>
+  <h2 class="sec-headline sr">Industries &amp;<br><em>Domains Served.</em></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+    <div class="skill-card sr sr-d1">
+      <div class="skill-card-icon">&#127973;</div>
+      <div class="skill-card-name">Healthcare</div>
+      <div class="skill-pills">
+        <span class="pill key">HL7 / FHIR</span><span class="pill">Clinical Interoperability</span>
+        <span class="pill">EHR Platforms</span><span class="pill">HIPAA-compliant Systems</span>
+        <span class="pill">Wellness SaaS</span>
+      </div>
+    </div>
+    <div class="skill-card sr sr-d2">
+      <div class="skill-card-icon">&#128185;</div>
+      <div class="skill-card-name">FinTech</div>
+      <div class="skill-pills">
+        <span class="pill key">ML Analytics Platforms</span><span class="pill">Portfolio Intelligence</span>
+        <span class="pill">Predictive Models</span><span class="pill">RPA Automation</span>
+        <span class="pill">Compliance Workflows</span>
+      </div>
+    </div>
+    <div class="skill-card sr sr-d3">
+      <div class="skill-card-icon">&#127754;</div>
+      <div class="skill-card-name">Aquaculture / AgTech</div>
+      <div class="skill-pills">
+        <span class="pill key">Computer Vision</span><span class="pill">Real-time AI Monitoring</span>
+        <span class="pill">IoT Sensor Platforms</span><span class="pill">GCP Data Pipelines</span>
+      </div>
+    </div>
+    <div class="skill-card sr sr-d4">
+      <div class="skill-card-icon">&#127970;</div>
+      <div class="skill-card-name">Enterprise SaaS &amp; IoT</div>
+      <div class="skill-pills">
+        <span class="pill key">Multi-tenant Architecture</span><span class="pill">IoT Device Management</span>
+        <span class="pill">Real-time Dashboards</span><span class="pill">HRMS Platforms</span>
+      </div>
+    </div>
+    <div class="skill-card sr sr-d1">
+      <div class="skill-card-icon">&#128666;</div>
+      <div class="skill-card-name">Transportation &amp; Logistics</div>
+      <div class="skill-pills">
+        <span class="pill key">RPA Workflow Automation</span><span class="pill">Operational Efficiency</span>
+        <span class="pill">Enterprise Integration</span><span class="pill">30&ndash;60% Effort Reduction</span>
+      </div>
+    </div>
+    <div class="skill-card sr sr-d2">
+      <div class="skill-card-icon">&#9981;</div>
+      <div class="skill-card-name">Oil &amp; Gas</div>
+      <div class="skill-pills">
+        <span class="pill key">Process Automation</span><span class="pill">Enterprise Workflows</span>
+        <span class="pill">Compliance Reporting</span><span class="pill">Automation Anywhere</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ═══ CERTIFICATIONS ═══ -->
 <section id="certifications">
-  <div class="sec-eyebrow">05 &mdash; Learning</div>
+  <div class="sec-eyebrow">06 &mdash; Learning</div>
   <h2 class="sec-headline sr">Certifications &amp;<br><em>Development.</em></h2>
   <div class="certs-grid">
     <div class="cert-item sr sr-d1">
@@ -943,7 +1138,7 @@ footer {
 
 <!-- ═══ OPEN SOURCE ═══ -->
 <section id="opensource">
-  <div class="sec-eyebrow">06 &mdash; Open Source</div>
+  <div class="sec-eyebrow">07 &mdash; Open Source</div>
   <h2 class="sec-headline sr">GitHub<br><em>Projects &amp; Tools.</em></h2>
   <p class="sec-sub sr sr-d1">26 public repositories — SDKs, developer tools, and AI-native apps built in the open. <a href="https://github.com/amitgaikwad2837" target="_blank" style="color:var(--gold);text-decoration:none;">View all on GitHub &rarr;</a></p>
 
@@ -1053,9 +1248,28 @@ footer {
 
 <div class="divider"></div>
 
+<!-- ═══ EDUCATION ═══ -->
+<section id="education" style="background:var(--bg2);">
+  <div class="sec-eyebrow">08 &mdash; Education</div>
+  <h2 class="sec-headline sr">Academic<br><em>Background.</em></h2>
+  <div style="max-width:600px;">
+    <div class="tl-item sr" style="padding-bottom:0;">
+      <div class="tl-dot" style="background:var(--gold);border-color:var(--gold);color:var(--bg);font-size:12px;font-weight:700;">BE</div>
+      <div class="tl-content">
+        <div class="tl-meta"><span class="tl-period">2009 &ndash; 2013</span></div>
+        <div class="tl-company">North Maharashtra University</div>
+        <div class="tl-role">Bachelor of Engineering, Information Technology</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:6px 14px;background:var(--gold-dim);border:1px solid rgba(200,169,110,0.2);border-radius:6px;font-family:var(--ff-mono);font-size:11px;color:var(--gold);font-weight:600;letter-spacing:0.06em;">FIRST CLASS WITH DISTINCTION</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- ═══ CONTACT ═══ -->
 <section id="contact">
-  <div class="sec-eyebrow">07 &mdash; Contact</div>
+  <div class="sec-eyebrow">09 &mdash; Contact</div>
   <h2 class="sec-headline sr">Let's Build<br><em>Something Great.</em></h2>
   <div class="contact-layout">
     <div class="sr sr-d1">
@@ -1074,6 +1288,14 @@ footer {
           <div class="channel-info">
             <div class="channel-label">LinkedIn</div>
             <div class="channel-val">linkedin.com/in/amit-gaikwad</div>
+          </div>
+          <div class="channel-arrow">&rarr;</div>
+        </a>
+        <a href="https://amitgaikwad2837.github.io/amitgaikwad.github.io/" target="_blank" class="channel-link">
+          <div class="channel-icon">&#127758;</div>
+          <div class="channel-info">
+            <div class="channel-label">Live Portfolio</div>
+            <div class="channel-val">amitgaikwad2837.github.io</div>
           </div>
           <div class="channel-arrow">&rarr;</div>
         </a>
@@ -1123,10 +1345,14 @@ document.querySelectorAll('.sr').forEach(el => sr.observe(el));
 
 /* Nav scroll tint */
 const nav = document.getElementById('nav');
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 window.addEventListener('scroll', () => {
-  nav.style.background = window.scrollY > 60
-    ? 'rgba(8,8,16,0.97)' : 'rgba(8,8,16,0.8)';
-});
+  if (isDark) {
+    nav.style.background = window.scrollY > 60 ? 'rgba(8,8,16,0.97)' : 'rgba(8,8,16,0.8)';
+  } else {
+    nav.style.background = window.scrollY > 60 ? 'rgba(248,247,244,0.98)' : 'rgba(248,247,244,0.88)';
+  }
+}, { passive: true });
 
 /* Active nav link */
 const sections = document.querySelectorAll('section[id]');
